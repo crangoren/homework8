@@ -11,6 +11,7 @@ public class GameWindow extends JFrame {
 
     private SettingWindow settingWindow;
     private BattleMap battleMap;
+   
 
     public GameWindow() {
         setBounds(WINDOW_X, WINDOW_Y, WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -20,6 +21,8 @@ public class GameWindow extends JFrame {
         settingWindow = new SettingWindow(this);
         battleMap = new BattleMap(this);
         add(battleMap, BorderLayout.CENTER);
+
+
 
         JPanel panel = new JPanel(new GridLayout(1, 2));
         JButton btnStartNewGame = new JButton("Start New Game");
@@ -42,4 +45,7 @@ public class GameWindow extends JFrame {
     public void startNewGame(int mode, int fieldSize, int winningLength){
         battleMap.startNewGame(mode, fieldSize, winningLength);
     }
+
+
+
 }

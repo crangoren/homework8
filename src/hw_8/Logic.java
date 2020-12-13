@@ -1,5 +1,6 @@
 package hw_8;
 
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,12 +18,14 @@ public class Logic {
 
     static boolean gameFinished;
 
+
     public static void go() {
         gameFinished = true;
 
         printMap();
         if (checkWinLines(DOT_X, DOTS_TO_WIN)) {
             System.out.println("Вы выиграли!!!");
+
             return;
         }
         if (isFull()) {
@@ -34,6 +37,9 @@ public class Logic {
         printMap();
         if (checkWinLines(DOT_O, DOTS_TO_WIN)) {
             System.out.println("Комьютер победил");
+
+
+
             return;
         }
         if (isFull()) {
@@ -190,5 +196,9 @@ public class Logic {
         }
         return false;
     }
+
+
+
+
 
 }
